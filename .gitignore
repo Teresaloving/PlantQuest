@@ -1,0 +1,43 @@
+# Dependencies
+node_modules/
+package-lock.json
+
+# Build outputs
+dist/
+build/
+*.log
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Hardhat
+cache/
+artifacts/
+coverage/
+coverage.json
+
+# Deployments (keep structure but remove sensitive data)
+deployments/sepolia/
+deployments/localhost/
+
+# FHEVM temp files
+fhevmTemp/
+
+# Vercel
+.vercel/
+
+# TypeScript
+*.tsbuildinfo
