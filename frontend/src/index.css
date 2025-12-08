@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 222 47% 11%;
+    --foreground: 213 31% 91%;
+    --card: 222 47% 11%;
+    --card-foreground: 213 31% 91%;
+    --popover: 222 47% 11%;
+    --popover-foreground: 213 31% 91%;
+    --primary: 271 81% 56%;
+    --primary-foreground: 213 31% 91%;
+    --secondary: 217 33% 17%;
+    --secondary-foreground: 213 31% 91%;
+    --muted: 217 33% 17%;
+    --muted-foreground: 215 20% 65%;
+    --accent: 217 33% 17%;
+    --accent-foreground: 213 31% 91%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 213 31% 91%;
+    --border: 217 33% 17%;
+    --input: 217 33% 17%;
+    --ring: 271 81% 56%;
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a0a2e 50%, #16213e 100%);
+    min-height: 100vh;
+  }
+}
+
+/* Custom cyberpunk effects */
+.cyber-border {
+  position: relative;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+
+.cyber-border::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 2px;
+  background: linear-gradient(135deg, #b026ff, #00d9ff, #ff00ff);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  z-index: -1;
+}
+
+.neon-text {
+  text-shadow: 
+    0 0 5px currentColor,
+    0 0 10px currentColor,
+    0 0 15px currentColor,
+    0 0 20px currentColor;
+}
+
+.glow-effect {
+  box-shadow: 
+    0 0 5px rgba(176, 38, 255, 0.5),
+    0 0 10px rgba(176, 38, 255, 0.5),
+    0 0 15px rgba(176, 38, 255, 0.5),
+    inset 0 0 5px rgba(176, 38, 255, 0.1);
+}
+
+.scan-line {
+  position: relative;
+  overflow: hidden;
+}
+
+.scan-line::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(0, 217, 255, 0.8), transparent);
+  animation: scan 3s linear infinite;
+}
