@@ -30,8 +30,6 @@ coverage/
 coverage.json
 
 # Deployments (keep structure but remove sensitive data)
-deployments/sepolia/
-deployments/localhost/
 
 # FHEVM temp files
 fhevmTemp/
@@ -41,3 +39,6 @@ fhevmTemp/
 
 # TypeScript
 *.tsbuildinfo
+deployments/sepolia/
+deployments/localhost/
+*.bak
